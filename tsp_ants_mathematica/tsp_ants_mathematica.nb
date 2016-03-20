@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     47595,       1035]
-NotebookOptionsPosition[     46502,        995]
-NotebookOutlinePosition[     46840,       1010]
-CellTagsIndexPosition[     46797,       1007]
+NotebookDataLength[     44255,        953]
+NotebookOptionsPosition[     43317,        918]
+NotebookOutlinePosition[     43657,        933]
+CellTagsIndexPosition[     43614,        930]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -914,87 +914,10 @@ Cell[BoxData["2081"], "Output",
    3.6671435754171658`*^9, 3.6671436940599403`*^9, 3.6671438138150578`*^9, 
    3.6671438639807158`*^9, 3.6671570330030117`*^9}]
 }, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Archive", "Chapter",
- CellChangeTimes->{{3.667009006695005*^9, 3.6670090091991177`*^9}}],
-
-Cell["\<\
-numOfTowns = 30;
-edges = Table[ RandomInteger[{1,10}] , {i, 1, numOfTowns}, {j, 1, numOfTowns}];
-baseTrace = 0.01;
-\[Alpha]=4;
-\[Beta]=1;
-Q = 1;
-\[Rho] = 0.5;
-300 runs\
-\>", "Text",
- CellChangeTimes->{{3.6670090147835073`*^9, 3.667009035489017*^9}, {
-  3.667009083209248*^9, 3.667009084408883*^9}}]
-}, Open  ]],
-
-Cell[TextData[Cell[BoxData[
- GraphicsBox[{{}, {{}, 
-    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.007333333333333334], 
-     AbsoluteThickness[1.6], PointBox[CompressedData["
-1:eJxd1UmOHFUUBdAHI4Y1YMDAgwAhhJBlFX2PP30PhU1nGvMpu0yPC1bwllBL
-+EuoJbwleAl/CbUEBBkpFCcnTyevbt4chBQPH9+9dnJ/RFy+L+Lfu/tcXP3v
-tOtt/WJ388bqB3a33Vl9sLvj9uoH8UO7O49XX9rdfmv1gh/Bj+5u7f0Yfhw/
-wd7l3V32+RV+/3D9v3s/iZ/CT+Nn8LP4Ofw8fgG/iF/CL+NX8Kv4NXwVt61z
-75M1f33rxPEGOY43yXG8RY7jbXIc75DjeJd8de2fz/e2Thzvk+P4gBzHh+Q4
-PiLH8TE5jk/IcXxKjuNo64YTF47P6OPEheMafZy4cFynjxMXjs/p48SF4wv6
-OHHh+JI+Tlw4vqKPExeOr+njxIXjBn2cuHB8Qx8nLhzf0seJC8d39HHiwvE9
-fZy4cNykjxMXjh/o48SFo2+94IY7Tjxw4YnjR/Zxwx3n6v37fODCE8fx1gtu
-uOPEAxeeOG5tveCGvYkHLjxx3N56wQ13nHjgwhPHCfu44Y4TD1x44rjDPm64
-48QDF544fmIfN9xx4oELTxw/s48b7jjxwIUnjl/Yxw13nHjgwhPHr+zjhjtO
-PHDhieM39nHDHSceuPDE8Tv7uOGOEw9ceOL4g33ccMeJBy48cfzJPm6448QD
-F5447rKPG+448cCFJ47TrQ/wgg9xw0e441Oc+AwPfI4L38MTX+D4a+sDvOBD
-3PAR7vgUJz7DA5/jwvfwxBc4/t76AC/4EDd8hDs+xYnP8MDnuP73P+W3ggg=
-
-      "]]}, {}}, {}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0., 136.525},
-  DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
-  FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  ImagePadding->All,
-  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
-         Part[#, 1]], 
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
-         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
-         Part[#, 1]], 
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
-         Part[#, 2]]}& )}},
-  PlotRange->{{0., 300.}, {138.5, 178.}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.05], 
-     Scaled[0.05]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.667002400944935*^9, 3.6670024552041597`*^9}, {
-   3.667002526304514*^9, 3.667002843381249*^9}, {3.667002911467849*^9, 
-   3.667002920730177*^9}, 3.667003011957672*^9, {3.6670031145477953`*^9, 
-   3.667003165541745*^9}, {3.667003201036878*^9, 3.667003507748826*^9}, 
-   3.66700811708692*^9, {3.6670082114665327`*^9, 3.66700822806964*^9}, 
-   3.667008326180347*^9, 3.667008371470193*^9, 3.667008445649715*^9, {
-   3.667008760847659*^9, 3.6670087893110447`*^9}, 3.667008831768297*^9, 
-   3.667008909659562*^9, 3.6670089844706182`*^9}]], "Chapter",
- CellChangeTimes->{3.6670090102039013`*^9}]
+}, Open  ]]
 },
-WindowSize->{1920, 1029},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1918, 1029},
+WindowMargins->{{-9, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.4 for Linux x86 (64-bit) (February 25, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1031,12 +954,7 @@ Cell[CellGroupData[{
 Cell[42357, 898, 314, 5, 32, "Input"],
 Cell[42674, 905, 615, 9, 32, "Output"]
 }, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[43338, 920, 94, 1, 66, "Chapter"],
-Cell[43435, 923, 308, 11, 187, "Text"]
-}, Open  ]],
-Cell[43758, 937, 2740, 56, 259, "Chapter"]
+}, Open  ]]
 }
 ]
 *)
