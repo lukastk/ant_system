@@ -244,14 +244,12 @@ void Simulation::updateAnt(Ant* ant) {
 }
 
 void Simulation::update() {
-	for (std::vector<Ant*>::const_iterator it = ants.begin(), end = ants.end(); it != end; ++it) {
+	for (vector<Ant*>::const_iterator it = ants.begin(), end = ants.end(); it != end; ++it) {
 		this->updateAnt(*it);
 	}
 
 	this->addAntTraces();
 	this->decayWorld();
-
-	//std::cout << ants[0]->pos.x << " " << ants[0]->pos.y << std::endl; //DEBUG
 }
 
 double Simulation::minTrace() {
