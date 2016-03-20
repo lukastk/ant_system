@@ -157,6 +157,6 @@ class Simulation {
 		boost::random::mt19937 random;
 };
 
-Simulation* initalize_simulation();
+Simulation* initialize_simulation();
 
 #endif

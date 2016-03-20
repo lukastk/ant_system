@@ -390,7 +390,7 @@ std::vector<Ant*>* Simulation::getAnts() {
 	return &this->ants;
 }
 
-Simulation* initalize_simulation() {
+Simulation* initialize_simulation() {
 	Simulation* sim = map1();
 	return sim;
 }

@@ -23,7 +23,7 @@ Color trace_hue_function(double p, double pmin, double pmax) {
 }
 
 int main( int argc, char* args[] ) {
-	Simulation* sim = initalize_simulation();
+	Simulation* sim = initialize_simulation();
 
 	//The window we'll be rendering to
   SDL_Window* window = NULL;
