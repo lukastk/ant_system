@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     97647,       1989]
-NotebookOptionsPosition[     96298,       1938]
-NotebookOutlinePosition[     96635,       1953]
-CellTagsIndexPosition[     96592,       1950]
+NotebookDataLength[    100173,       2056]
+NotebookOptionsPosition[     98705,       2001]
+NotebookOutlinePosition[     99044,       2016]
+CellTagsIndexPosition[     99001,       2013]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -27,6 +27,68 @@ Cell[BoxData[
  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Input",
  CellChangeTimes->{{3.667421646325279*^9, 3.667421652472698*^9}, {
   3.66742565153415*^9, 3.667425652932137*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Code explanation", "Subsubsection",
+ CellChangeTimes->{{3.667486975844782*^9, 3.667486978528399*^9}}],
+
+Cell[TextData[{
+ "To run the code, simply execute the entire notebook. All the parameters of \
+the simulation can be edited by changing the values in the section ",
+ StyleBox["Simulation parameters",
+  FontSlant->"Italic"],
+ ". Explanation of the paramters:\n\n",
+ StyleBox["tspFileName: ",
+  FontSlant->"Italic"],
+ "The name of the TSP example to test. The TSP examples reside in the \
+subdirectory \[OpenCurlyDoubleQuote]./",
+ StyleBox["TSP\[CloseCurlyDoubleQuote]",
+  FontSlant->"Italic"],
+ " of the notebook. For each TSP example, there are two files. The first file \
+being the setup of the problem, and the second being the optimal route.\n\n",
+ StyleBox["c",
+  FontSlant->"Italic"],
+ ": The trace base-line that will be added to all the edges at the beginning \
+of the simulation.\n",
+ StyleBox["\[Alpha]",
+  FontSlant->"Italic"],
+ ": A parameter that influences the importance of trace in the probability \
+calculation of the movement of the ants.\n\[Beta]: A parameter that \
+influences the importance of ",
+ StyleBox["visibility",
+  FontSlant->"Italic"],
+ " in the probability calculation of the movement of the ants. The visibility \
+of an edge is the reciprocal of its weight (i.e the visibility between towns ",
+ StyleBox["i",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["j",
+  FontSlant->"Italic"],
+ " is the reciprocal of the distance between them).\n",
+ StyleBox["Q:",
+  FontSlant->"Italic"],
+ " Affects the amount of trace that is added on to each edge, at the end of a \
+cycle.\n",
+ StyleBox["\[Rho]",
+  FontSlant->"Italic"],
+ ": A multiplicative factor that will set the rate of decay of the trace at \
+each edge (\[Rho] = 1 \[RightArrow] no decay).\n",
+ StyleBox["simulationRuns:",
+  FontSlant->"Italic"],
+ " The amount of cycles that the simulation will run.\n\nGraphs of the \
+performance of the algorithm will be generated in the section ",
+ StyleBox["Visualise results. ",
+  FontSlant->"Italic"],
+ "The shortest path found in the algorithm, compared with the optimal path, \
+will be shown in the section ",
+ StyleBox["Path visualisations",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.667486979829977*^9, 3.667487260569585*^9}, {
+  3.667487304194808*^9, 3.667487445639927*^9}}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -95,7 +157,7 @@ Cell[BoxData[{
    3.667476726948677*^9, 3.6674767318069077`*^9}, {3.66747713246933*^9, 
    3.6674771508263483`*^9}, {3.667477716319756*^9, 3.667477718516184*^9}, 
    3.667478147969949*^9, {3.667478391098184*^9, 3.6674783986218033`*^9}}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -564,7 +626,7 @@ tsp_ants_mathematica'\"\>",
    3.6674777212269783`*^9, 3.667477745966468*^9}, 3.6674781691920443`*^9, 
    3.6674784009282913`*^9, 3.6674827338018713`*^9}]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1343,9 +1405,10 @@ Sg==
 
 Cell[CellGroupData[{
 
-Cell["Create path visualisations", "Subsubsection",
+Cell["Path visualisations", "Subsubsection",
  CellChangeTimes->{{3.667423623222472*^9, 3.6674236288554287`*^9}, {
-  3.6674282023185873`*^9, 3.667428210134131*^9}}],
+  3.6674282023185873`*^9, 3.667428210134131*^9}, {3.667487448079356*^9, 
+  3.66748744982064*^9}}],
 
 Cell[CellGroupData[{
 
@@ -1933,11 +1996,11 @@ in02gb8R4m018XTY1GPYzwjy/2dRfZhR6i2+K9kwxhyhy/TFyOcT9Nlyoncr
    3.66743806737505*^9, 3.667476794398116*^9, 3.667477535543953*^9, 
    3.667477731507662*^9, 3.667478180001005*^9, 3.6674787293019743`*^9}]
 }, Open  ]]
-}, Open  ]]
+}, Closed]]
 }, Open  ]]
 },
 WindowSize->{959, 1029},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowMargins->{{Automatic, -9}, {Automatic, -8}},
 FrontEndVersion->"10.4 for Linux x86 (64-bit) (February 25, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1956,40 +2019,44 @@ Cell[CellGroupData[{
 Cell[580, 22, 97, 1, 93, "Title"],
 Cell[680, 25, 190, 3, 32, "Input"],
 Cell[CellGroupData[{
-Cell[895, 32, 114, 1, 35, "Subsubsection"],
-Cell[1012, 35, 3877, 61, 187, "Input"]
+Cell[895, 32, 107, 1, 35, "Subsubsection"],
+Cell[1005, 35, 2219, 54, 407, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4926, 101, 127, 2, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[5078, 107, 6795, 150, 671, "Input"],
-Cell[11876, 259, 15113, 305, 65, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[27038, 570, 106, 1, 35, "Subsubsection"],
-Cell[27147, 573, 4799, 121, 517, "Input"]
+Cell[3261, 94, 114, 1, 35, "Subsubsection"],
+Cell[3378, 97, 3877, 61, 187, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[31983, 699, 105, 1, 29, "Subsubsection"],
-Cell[32091, 702, 4632, 73, 77, "Input"],
-Cell[36726, 777, 2281, 33, 32, "Input"]
-}, Closed]],
+Cell[7292, 163, 127, 2, 29, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[39044, 815, 108, 1, 29, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[39177, 820, 8765, 207, 1331, "Input"],
-Cell[47945, 1029, 1793, 25, 23, "Print"],
-Cell[49741, 1056, 14376, 283, 324, "Output"]
+Cell[7444, 169, 6795, 150, 671, "Input"],
+Cell[14242, 321, 15113, 305, 65, "Output"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[64166, 1345, 170, 2, 29, "Subsubsection"],
+Cell[29404, 632, 106, 1, 29, "Subsubsection"],
+Cell[29513, 635, 4799, 121, 517, "Input"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[64361, 1351, 6701, 158, 891, "Input"],
-Cell[71065, 1511, 25193, 422, 874, "Output"]
+Cell[34349, 761, 105, 1, 29, "Subsubsection"],
+Cell[34457, 764, 4632, 73, 77, "Input"],
+Cell[39092, 839, 2281, 33, 32, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[41410, 877, 108, 1, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[41543, 882, 8765, 207, 1331, "Input"],
+Cell[50311, 1091, 1793, 25, 23, "Print"],
+Cell[52107, 1118, 14376, 283, 324, "Output"]
 }, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[66532, 1407, 211, 3, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[66768, 1414, 6701, 158, 891, "Input"],
+Cell[73472, 1574, 25193, 422, 874, "Output"]
 }, Open  ]]
+}, Closed]]
 }, Open  ]]
 }
 ]
